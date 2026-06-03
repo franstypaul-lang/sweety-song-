@@ -77,24 +77,20 @@
                     <input type="hidden" name="q3_packaging" id="q3_packaging" value="">
                 </div>
                 <div class="question-card" id="q4-card">
-                    <label class="question-label"><span class="q-number">Q4</span> Did you notice any issues with the packaging? <span class="hint">(Select all that apply)</span></label>
-                    <div class="checkbox-list">
-                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="none"><span class="checkbox-text">No issues &mdash; everything looked great!</span></label>
-                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="damaged_box"><span class="checkbox-text">Box was damaged or crushed</span></label>
-                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="missing_items"><span class="checkbox-text">Missing items (gel, manual, batteries, etc.)</span></label>
-                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="unclear_instructions"><span class="checkbox-text">Instructions were unclear or not in my language</span></label>
-                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="cheap_feel"><span class="checkbox-text">Packaging felt less premium than expected</span></label>
-                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="other_issue"><span class="checkbox-text">Other issue</span></label>
+                    <label class="question-label"><span class="q-number">Q4</span> Did you notice any issues with the packaging?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q4_issues" value="no"><span>No, everything was perfect</span></label>
+                        <label class="pill-option"><input type="radio" name="q4_issues" value="yes"><span>Yes, I noticed some issues</span></label>
                     </div>
-                    <div class="conditional-field" id="q4_other_wrap" style="display:none;"><textarea name="q4_other_text" placeholder="Please describe the issue..." rows="2"></textarea></div>
+                    <div class="conditional-field" id="q4_yes_wrap" style="display:none;margin-top:12px;"><textarea name="q4_issue_details" placeholder="Please describe the issue you noticed..." rows="3" class="text-input"></textarea></div>
                 </div>
                 <div class="question-card" id="q5-card">
-                    <label class="question-label"><span class="q-number">Q5</span> Did the product look and feel trustworthy when you first held it?</label>
+                    <label class="question-label"><span class="q-number">Q5</span> How confident did you feel about the product quality when you first held it?</label>
                     <div class="option-row">
-                        <label class="pill-option"><input type="radio" name="q5_trust" value="yes_very"><span>Yes, very much</span></label>
-                        <label class="pill-option"><input type="radio" name="q5_trust" value="somewhat"><span>Somewhat</span></label>
-                        <label class="pill-option"><input type="radio" name="q5_trust" value="not_really"><span>Not really</span></label>
-                        <label class="pill-option"><input type="radio" name="q5_trust" value="no"><span>No, it felt cheap</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="very_confident"><span>Very confident &mdash; felt premium</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="fairly_confident"><span>Fairly confident</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="slightly_unsure"><span>Slightly unsure</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="not_confident"><span>Not confident about the quality</span></label>
                     </div>
                 </div>
                 <div class="section-nav"><button type="button" class="btn-back" onclick="navigateSection(1)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</button><button type="button" class="btn-next" onclick="navigateSection(3)">Next: First Use <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
@@ -131,10 +127,19 @@
                         <label class="pill-option"><input type="radio" name="q7b_medical" value="no"><span>No</span></label>
                     </div>
                 </div>
-                <div class="question-card" id="q8-card">
-                    <label class="question-label"><span class="q-number">Q8</span> How easy was the doppler to use &mdash; even without a medical background?</label>
+                <div class="question-card" id="q8-card-nonmedical" style="display:none;">
+                    <label class="question-label"><span class="q-number">Q9</span> How easy was the doppler to use &mdash; even without a medical background?</label>
                     <div class="scale-rating" id="q8_scale"><div class="scale-labels"><span>Very difficult</span><span>Very easy</span></div><div class="scale-buttons"><button type="button" class="scale-btn" data-value="1">1</button><button type="button" class="scale-btn" data-value="2">2</button><button type="button" class="scale-btn" data-value="3">3</button><button type="button" class="scale-btn" data-value="4">4</button><button type="button" class="scale-btn" data-value="5">5</button></div></div>
                     <input type="hidden" name="q8_ease" id="q8_ease" value="">
+                </div>
+                <div class="question-card" id="q8-card-medical" style="display:none;">
+                    <label class="question-label"><span class="q-number">Q9</span> How does the Sweety Song compare to clinical-grade fetal dopplers you have used?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q8_medical_compare" value="comparable"><span>Comparable to clinical devices</span></label>
+                        <label class="pill-option"><input type="radio" name="q8_medical_compare" value="adequate_home"><span>Adequate for home use</span></label>
+                        <label class="pill-option"><input type="radio" name="q8_medical_compare" value="below_clinical"><span>Below clinical standards</span></label>
+                        <label class="pill-option"><input type="radio" name="q8_medical_compare" value="not_comparable"><span>Cannot compare &mdash; different purpose</span></label>
+                    </div>
                 </div>
                 <div class="question-card" id="q9-card">
                     <label class="question-label"><span class="q-number">Q9</span> What helped you figure out how to use the doppler? <span class="hint">(Select all that apply)</span></label>
