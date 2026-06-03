@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweety Song Fetal Doppler — Your Feedback Matters</title>
+    <meta name="description" content="Share your experience with the Sweety Song Fetal Doppler by Easy Healthcare / Premom. Help us improve for expecting mothers across India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <!-- Hero / Welcome Screen -->
+    <section class="hero" id="heroSection">
+        <div class="hero-content">
+            <img src="logo.png" alt="Easy@Home & Premom" class="brand-logo">
+            <h1>We'd Love to Hear <br><span class="gradient-text">Your Experience</span></h1>
+            <p class="hero-subtitle">
+                Thank you for being one of the first to try the <strong>Sweety Song Fetal Doppler</strong> in India.
+                Your honest feedback &mdash; whether big or small &mdash; will directly shape how we improve this product for expecting mothers everywhere.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item"><span class="stat-icon">&#x23F1;</span><span>~5 minutes</span></div>
+                <div class="stat-item"><span class="stat-icon">&#x1F4DD;</span><span>18 questions</span></div>
+                <div class="stat-item"><span class="stat-icon">&#x1F512;</span><span>100% anonymous</span></div>
+            </div>
+            <button class="btn-primary" id="startSurveyBtn" onclick="startSurvey()">
+                Begin Survey
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Survey Container -->
+    <main class="survey-container" id="surveyContainer" style="display:none;">
+        <div class="progress-wrapper">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <span class="progress-label" id="progressLabel">Section 1 of 6</span>
+        </div>
+        <form id="surveyForm" onsubmit="return false;">
+
+            <!-- SECTION 1: About You -->
+            <section class="survey-section active" id="section1" data-section="1">
+                <div class="section-header"><span class="section-number">01</span><h2>About You</h2><p class="section-desc">Help us understand who you are so we can tailor your experience.</p></div>
+                <div class="question-card" id="q1-card">
+                    <label class="question-label"><span class="q-number">Q1</span> What stage of pregnancy are you in? <span class="required">*</span></label>
+                    <div class="option-grid option-grid-3">
+                        <label class="option-card" tabindex="0"><input type="radio" name="q1_role" value="trimester_1" required><div class="option-content"><span class="option-emoji">&#x1F331;</span><span class="option-text">1st Trimester<br><small style="color:var(--text-muted)">Weeks 1&ndash;12</small></span></div></label>
+                        <label class="option-card" tabindex="0"><input type="radio" name="q1_role" value="trimester_2"><div class="option-content"><span class="option-emoji">&#x1F33C;</span><span class="option-text">2nd Trimester<br><small style="color:var(--text-muted)">Weeks 13&ndash;26</small></span></div></label>
+                        <label class="option-card" tabindex="0"><input type="radio" name="q1_role" value="trimester_3"><div class="option-content"><span class="option-emoji">&#x1F930;</span><span class="option-text">3rd Trimester<br><small style="color:var(--text-muted)">Weeks 27&ndash;40</small></span></div></label>
+                        
+                    </div>
+                </div>
+                <div class="question-card" id="q2-card">
+                    <label class="question-label"><span class="q-number">Q2</span> How did you receive the Sweety Song Fetal Doppler?</label>
+                    <div class="option-grid option-grid-3">
+                        <label class="option-card compact" tabindex="0"><input type="radio" name="q2_source" value="amazon_india"><div class="option-content"><span class="option-emoji">&#x1F4E6;</span><span class="option-text">Amazon India</span></div></label>
+                        <label class="option-card compact" tabindex="0"><input type="radio" name="q2_source" value="website"><div class="option-content"><span class="option-emoji">&#x1F310;</span><span class="option-text">Premom website</span></div></label>
+                        <label class="option-card compact" tabindex="0"><input type="radio" name="q2_source" value="gift_direct"><div class="option-content"><span class="option-emoji">&#x1F381;</span><span class="option-text">Gift / Direct</span></div></label>
+                        
+                        <label class="option-card compact" tabindex="0"><input type="radio" name="q2_source" value="other"><div class="option-content"><span class="option-emoji">&#x1F4AC;</span><span class="option-text">Other</span></div></label>
+                    </div>
+                    <div class="conditional-field" id="q2_other_wrap" style="display:none;margin-top:10px;"><textarea name="q2_other_text" placeholder="Please specify..." rows="2" class="text-input"></textarea></div>
+                </div>
+                <div class="section-nav"><div></div><button type="button" class="btn-next" onclick="navigateSection(2)">Next: Unboxing <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            </section>
+
+            <!-- SECTION 2: Packaging & Unboxing -->
+            <section class="survey-section" id="section2" data-section="2">
+                <div class="section-header"><span class="section-number">02</span><h2>Packaging &amp; Unboxing</h2><p class="section-desc">Tell us about your first impression when you opened the box.</p></div>
+                <div class="question-card" id="q3-card">
+                    <label class="question-label"><span class="q-number">Q3</span> How would you rate the overall packaging quality?</label>
+                    <div class="star-rating" id="q3_stars" data-name="q3_packaging"><button type="button" class="star" data-value="1">&#x2605;</button><button type="button" class="star" data-value="2">&#x2605;</button><button type="button" class="star" data-value="3">&#x2605;</button><button type="button" class="star" data-value="4">&#x2605;</button><button type="button" class="star" data-value="5">&#x2605;</button><span class="star-label" id="q3_label">Tap to rate</span></div>
+                    <input type="hidden" name="q3_packaging" id="q3_packaging" value="">
+                </div>
+                <div class="question-card" id="q4-card">
+                    <label class="question-label"><span class="q-number">Q4</span> Did you notice any issues with the packaging? <span class="hint">(Select all that apply)</span></label>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="none"><span class="checkbox-text">No issues &mdash; everything looked great!</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="damaged_box"><span class="checkbox-text">Box was damaged or crushed</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="missing_items"><span class="checkbox-text">Missing items (gel, manual, batteries, etc.)</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="unclear_instructions"><span class="checkbox-text">Instructions were unclear or not in my language</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="cheap_feel"><span class="checkbox-text">Packaging felt less premium than expected</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q4_issues" value="other_issue"><span class="checkbox-text">Other issue</span></label>
+                    </div>
+                    <div class="conditional-field" id="q4_other_wrap" style="display:none;"><textarea name="q4_other_text" placeholder="Please describe the issue..." rows="2"></textarea></div>
+                </div>
+                <div class="question-card" id="q5-card">
+                    <label class="question-label"><span class="q-number">Q5</span> Did the product look and feel trustworthy when you first held it?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="yes_very"><span>Yes, very much</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="somewhat"><span>Somewhat</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="not_really"><span>Not really</span></label>
+                        <label class="pill-option"><input type="radio" name="q5_trust" value="no"><span>No, it felt cheap</span></label>
+                    </div>
+                </div>
+                <div class="section-nav"><button type="button" class="btn-back" onclick="navigateSection(1)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</button><button type="button" class="btn-next" onclick="navigateSection(3)">Next: First Use <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            </section>
+
+            <!-- SECTION 3: First Use & Emotional Experience -->
+            <section class="survey-section" id="section3" data-section="3">
+                <div class="section-header"><span class="section-number">03</span><h2>Your First Experience</h2><p class="section-desc">This is the most important part &mdash; tell us what it felt like to use the doppler for the first time.</p></div>
+                <div class="question-card highlight-card" id="q6-card">
+                    <label class="question-label"><span class="q-number">Q6</span> Were you able to hear the baby's heartbeat on your very first try?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q6_first_try" value="yes_first"><span>Yes, right away!</span></label>
+                        <label class="pill-option"><input type="radio" name="q6_first_try" value="few_tries"><span>After a few tries</span></label>
+                        <label class="pill-option"><input type="radio" name="q6_first_try" value="needed_help"><span>Needed someone's help</span></label>
+                        <label class="pill-option"><input type="radio" name="q6_first_try" value="could_not"><span>Could not find it</span></label>
+                    </div>
+                </div>
+                <div class="question-card" id="q7-card">
+                    <label class="question-label"><span class="q-number">Q7</span> How did you feel when you first heard (or tried to hear) the heartbeat?</label>
+                    <div class="emoji-rating" id="q7_emoji">
+                        <button type="button" class="emoji-btn" data-value="overjoyed"><span class="emoji-face">&#x1F970;</span><span class="emoji-label">Overjoyed</span></button>
+                        <button type="button" class="emoji-btn" data-value="relieved"><span class="emoji-face">&#x1F60C;</span><span class="emoji-label">Relieved</span></button>
+                        <button type="button" class="emoji-btn" data-value="excited"><span class="emoji-face">&#x1F603;</span><span class="emoji-label">Excited</span></button>
+                        <button type="button" class="emoji-btn" data-value="anxious"><span class="emoji-face">&#x1F630;</span><span class="emoji-label">Anxious</span></button>
+                        <button type="button" class="emoji-btn" data-value="confused"><span class="emoji-face">&#x1F615;</span><span class="emoji-label">Confused</span></button>
+                        <button type="button" class="emoji-btn" data-value="disappointed"><span class="emoji-face">&#x1F61E;</span><span class="emoji-label">Disappointed</span></button>
+                    </div>
+                    <input type="hidden" name="q7_emotion" id="q7_emotion" value="">
+                </div>
+                <div class="question-card" id="q7b-card">
+                    <label class="question-label"><span class="q-number">Q8</span> Are you from a medical background?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q7b_medical" value="yes"><span>Yes</span></label>
+                        <label class="pill-option"><input type="radio" name="q7b_medical" value="no"><span>No</span></label>
+                    </div>
+                </div>
+                <div class="question-card" id="q8-card">
+                    <label class="question-label"><span class="q-number">Q8</span> How easy was the doppler to use &mdash; even without a medical background?</label>
+                    <div class="scale-rating" id="q8_scale"><div class="scale-labels"><span>Very difficult</span><span>Very easy</span></div><div class="scale-buttons"><button type="button" class="scale-btn" data-value="1">1</button><button type="button" class="scale-btn" data-value="2">2</button><button type="button" class="scale-btn" data-value="3">3</button><button type="button" class="scale-btn" data-value="4">4</button><button type="button" class="scale-btn" data-value="5">5</button></div></div>
+                    <input type="hidden" name="q8_ease" id="q8_ease" value="">
+                </div>
+                <div class="question-card" id="q9-card">
+                    <label class="question-label"><span class="q-number">Q9</span> What helped you figure out how to use the doppler? <span class="hint">(Select all that apply)</span></label>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" name="q9_help" value="manual"><span class="checkbox-text">Instruction manual in the box</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q9_help" value="youtube"><span class="checkbox-text">YouTube / online videos</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q9_help" value="family"><span class="checkbox-text">Family or friends helped</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q9_help" value="doctor"><span class="checkbox-text">My doctor or midwife showed me</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q9_help" value="intuitive"><span class="checkbox-text">It was intuitive &mdash; figured it out myself</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q9_help" value="listing"><span class="checkbox-text">Amazon listing / product page</span></label>
+                    </div>
+                </div>
+                <div class="section-nav"><button type="button" class="btn-back" onclick="navigateSection(2)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</button><button type="button" class="btn-next" onclick="navigateSection(4)">Next: Product Quality <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            </section>
+
+            <!-- SECTION 4: Product Quality & Expectations -->
+            <section class="survey-section" id="section4" data-section="4">
+                <div class="section-header"><span class="section-number">04</span><h2>Product Quality &amp; Expectations</h2><p class="section-desc">How does the actual product compare to what you expected?</p></div>
+                <div class="question-card" id="q10-card">
+                    <label class="question-label"><span class="q-number">Q10</span> How would you rate the sound quality of the heartbeat?</label>
+                    <div class="star-rating" id="q10_stars" data-name="q10_sound"><button type="button" class="star" data-value="1">&#x2605;</button><button type="button" class="star" data-value="2">&#x2605;</button><button type="button" class="star" data-value="3">&#x2605;</button><button type="button" class="star" data-value="4">&#x2605;</button><button type="button" class="star" data-value="5">&#x2605;</button><span class="star-label" id="q10_label">Tap to rate</span></div>
+                    <input type="hidden" name="q10_sound" id="q10_sound" value="">
+                </div>
+                <div class="question-card" id="q11-card">
+                    <label class="question-label"><span class="q-number">Q11</span> Compared to what you expected (from the listing, reviews, or word of mouth), the product was:</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q11_expectation" value="better"><span>Better than expected</span></label>
+                        <label class="pill-option"><input type="radio" name="q11_expectation" value="as_expected"><span>About what I expected</span></label>
+                        <label class="pill-option"><input type="radio" name="q11_expectation" value="below"><span>Below my expectations</span></label>
+                    </div>
+                </div>
+                <div class="question-card" id="q12-card">
+                    <label class="question-label"><span class="q-number">Q12</span> Did you experience any issues with the device? <span class="hint">(Select all that apply)</span></label>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="none"><span class="checkbox-text">No issues at all</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="no_sound"><span class="checkbox-text">No sound / very low volume</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="static"><span class="checkbox-text">Too much static / background noise</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="battery"><span class="checkbox-text">Battery issues</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="gel"><span class="checkbox-text">Gel was insufficient or missing</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="display"><span class="checkbox-text">Display not working properly</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q12_hardware" value="build_quality"><span class="checkbox-text">Build quality felt fragile</span></label>
+                    </div>
+                </div>
+                <div class="question-card" id="q13-card">
+                    <label class="question-label"><span class="q-number">Q13</span> How do you feel about the price you paid (or the perceived value)?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q13_price" value="great_value"><span>Great value for money</span></label>
+                        <label class="pill-option"><input type="radio" name="q13_price" value="fair"><span>Fair price</span></label>
+                        <label class="pill-option"><input type="radio" name="q13_price" value="expensive"><span>A bit expensive</span></label>
+                        <label class="pill-option"><input type="radio" name="q13_price" value="not_sure"><span>Not sure / Received as gift</span></label>
+                    </div>
+                </div>
+                <div class="section-nav"><button type="button" class="btn-back" onclick="navigateSection(3)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</button><button type="button" class="btn-next" onclick="navigateSection(5)">Next: Support &amp; Guidance <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            </section>
+
+            <!-- SECTION 5: Support, Guidance & HCP -->
+            <section class="survey-section" id="section5" data-section="5">
+                <div class="section-header"><span class="section-number">05</span><h2>Support &amp; Guidance</h2><p class="section-desc">Help us understand what additional support would make your experience better.</p></div>
+                <div class="question-card" id="q14-card">
+                    <label class="question-label"><span class="q-number">Q14</span> What additional support or guidance would have been helpful? <span class="hint">(Select all that apply)</span></label>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" name="q14_support" value="video_tutorial"><span class="checkbox-text">Video tutorial (YouTube / WhatsApp)</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q14_support" value="hindi_manual"><span class="checkbox-text">Instructions in Hindi / regional language</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q14_support" value="whatsapp_support"><span class="checkbox-text">WhatsApp support line</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q14_support" value="qr_code"><span class="checkbox-text">QR code on box linking to setup guide</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q14_support" value="doctor_tips"><span class="checkbox-text">Tips from a doctor on best usage practices</span></label>
+                        <label class="checkbox-item"><input type="checkbox" name="q14_support" value="none_needed"><span class="checkbox-text">I had everything I needed</span></label>
+                    </div>
+                </div>
+                <div class="question-card hcp-only" id="q15-card" style="display:none;">
+                    <div class="hcp-badge">For Healthcare Providers Only</div>
+                    <label class="question-label"><span class="q-number">Q15</span> As a healthcare professional, would you recommend this device to your patients?</label>
+                    <div class="option-row">
+                        <label class="pill-option"><input type="radio" name="q15_hcp_recommend" value="yes_definitely"><span>Yes, definitely</span></label>
+                        <label class="pill-option"><input type="radio" name="q15_hcp_recommend" value="yes_with_guidance"><span>Yes, with proper guidance</span></label>
+                        <label class="pill-option"><input type="radio" name="q15_hcp_recommend" value="not_sure"><span>Not sure yet</span></label>
+                        <label class="pill-option"><input type="radio" name="q15_hcp_recommend" value="no"><span>No, I have concerns</span></label>
+                    </div>
+                </div>
+                <div class="question-card hcp-only" id="q16-card" style="display:none;">
+                    <div class="hcp-badge">For Healthcare Providers Only</div>
+                    <label class="question-label"><span class="q-number">Q16</span> What concerns (if any) do you have about patients using a home fetal doppler?</label>
+                    <textarea name="q16_hcp_concerns" placeholder="e.g., risk of misinterpretation, anxiety from false readings, replacing clinic visits..." rows="3" class="text-input"></textarea>
+                </div>
+                <div class="section-nav"><button type="button" class="btn-back" onclick="navigateSection(4)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</button><button type="button" class="btn-next" onclick="navigateSection(6)">Next: Final Thoughts <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            </section>
+
+            <!-- SECTION 6: Recommendation & Final -->
+            <section class="survey-section" id="section6" data-section="6">
+                <div class="section-header"><span class="section-number">06</span><h2>Final Thoughts</h2><p class="section-desc">Almost done! Just a few more questions to wrap up.</p></div>
+                <div class="question-card nps-card" id="q17-card">
+                    <label class="question-label"><span class="q-number">Q17</span> On a scale of 0&ndash;10, how likely are you to recommend the Sweety Song Fetal Doppler to a friend or family member?</label>
+                    <div class="nps-scale" id="q17_nps">
+                        <div class="nps-labels"><span>Not at all likely</span><span>Extremely likely</span></div>
+                        <div class="nps-buttons">
+                            <button type="button" class="nps-btn detractor" data-value="0">0</button><button type="button" class="nps-btn detractor" data-value="1">1</button><button type="button" class="nps-btn detractor" data-value="2">2</button><button type="button" class="nps-btn detractor" data-value="3">3</button><button type="button" class="nps-btn detractor" data-value="4">4</button><button type="button" class="nps-btn detractor" data-value="5">5</button><button type="button" class="nps-btn detractor" data-value="6">6</button><button type="button" class="nps-btn passive" data-value="7">7</button><button type="button" class="nps-btn passive" data-value="8">8</button><button type="button" class="nps-btn promoter" data-value="9">9</button><button type="button" class="nps-btn promoter" data-value="10">10</button>
+                        </div>
+                        <div class="nps-feedback" id="npsFeedback"></div>
+                    </div>
+                    <input type="hidden" name="q17_nps" id="q17_nps_val" value="">
+                </div>
+                <div class="question-card" id="q18-card">
+                    <label class="question-label"><span class="q-number">Q18</span> What is the #1 reason for your score above?</label>
+                    <textarea name="q18_nps_reason" placeholder="What stands out most about your experience?" rows="3" class="text-input"></textarea>
+                </div>
+                <div class="question-card" id="q19-card">
+                    <label class="question-label"><span class="q-number">Q19</span> Is there anything else you'd like to share with us?</label>
+                    <textarea name="q19_open" placeholder="Any suggestions, complaints, compliments, feature requests, or just a message for the team..." rows="4" class="text-input"></textarea>
+                </div>
+                <div class="question-card" id="q20-card">
+                    <label class="question-label"><span class="q-number">Q20</span> Would you like us to follow up on your feedback? <span class="hint">(Optional &mdash; leave blank to stay anonymous)</span></label>
+                    <div class="contact-fields">
+                        <input type="text" name="q20_name" placeholder="Your name (optional)" class="text-input-sm">
+                        <input type="tel" name="q20_phone" placeholder="WhatsApp / Phone number (optional)" class="text-input-sm">
+                        <input type="email" name="q20_email" placeholder="Email (optional)" class="text-input-sm">
+                    </div>
+                </div>
+                <div class="section-nav"><button type="button" class="btn-back" onclick="navigateSection(5)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back</button><button type="button" class="btn-submit" id="submitBtn" onclick="submitSurvey()"><span class="btn-submit-text">Submit My Feedback</span> <span class="btn-submit-icon">&#x1F49B;</span></button></div>
+            </section>
+
+        </form>
+    </main>
+
+    <!-- Thank You Screen -->
+    <section class="thank-you" id="thankYouSection" style="display:none;">
+        <div class="thank-you-content">
+            <div class="confetti" id="confetti" aria-hidden="true"></div>
+            <div class="thank-you-icon">&#x1F64F;</div>
+            <h2>Thank You So Much!</h2>
+            <p>Your feedback is incredibly valuable to us. It will directly help us improve the Sweety Song Fetal Doppler for expecting mothers across India.</p>
+            <div class="thank-you-note"><img src="logo.png" alt="Easy@Home & Premom" class="brand-logo" style="margin-bottom:12px"><br><p><strong>Easy Healthcare / Premom India</strong><br>Making every pregnancy journey a little more magical.</p></div>
+            <div class="share-section">
+                <p class="share-label">Know someone who has a Sweety Song Doppler? Share this survey:</p>
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp" onclick="shareWhatsApp()"><span>Share on WhatsApp</span></button>
+                    <button class="share-btn copy-link" onclick="copyLink()"><span id="copyText">Copy Survey Link</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="survey.js"></script>
+</body>
+</html>
